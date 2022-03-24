@@ -1,4 +1,4 @@
-# Kafka and Spark usages
+# Kafka + Spark examples
 
 This repository has 3 examples of how to produce and consume data from Kafka topics based on `string`, `json` and `avro`.
 

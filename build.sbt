@@ -1,4 +1,4 @@
-name := "kafka-spark-usages"
+name := "kafka-spark-examples"
 version := "0.0.1"
 scalaVersion := "2.12.15"
 
