@@ -24,7 +24,7 @@ $ docker-compose -f docker/docker-compose-kafka.dev.yml up
 
 ### String
 
-This example consists of simulating that the content trafficked in the topic is a simple text and that, as a result, it will be shown on the consumer's screen.
+This example consists of simulating that the content encoded in the topic is a simple text and that, as a result, it will be shown on the consumer's screen.
 
 To execute, you must execute the producer and in another terminal the consumer
 
@@ -40,7 +40,7 @@ $ make string-consumer
 
 ### Json
 
-This example consists of simulating that the content trafficked in the topic is a json, the consumer must serialize the data as a dataframe in Spark.
+This example consists of simulating that the content encoded in the topic is a json, the consumer must serialize the data as a dataframe in Spark.
 
 The schema used represents an Ecommerce product, follows the schema:
 * `id`: string
@@ -61,7 +61,7 @@ $ make json-consumer
 
 ### Avro
 
-This example consists of simulating that the content trafficked in the topic is a json, the consumer must serialize the data as a dataframe in Spark.
+This example consists of simulating that the content encoded in the topic is a avro, the consumer must serialize the data as a dataframe in Spark.
 
 The schema used represents an Ecommerce product, follows the schema:
 * `id`: string
@@ -80,4 +80,27 @@ $ make avro-producer
 * Execute consumer
 ```sh
 $ make avro-consumer
+```
+
+### Protobuf
+
+This example consists of simulating that the content encoded in the topic is a protobuf, the consumer must serialize the data as a dataframe in Spark. To accomplish that was used the [scalaPB](https://scalapb.github.io/) library for gRPC, for more information look the [documentation for SparkSQL](https://scalapb.github.io/docs/sparksql/)
+
+The schema used represents an Ecommerce product, follows the schema:
+* `id`: string
+* `name`: string
+* `price`: double
+
+The protobu can be found at: `./src/main/protobuf/product.proto`
+
+To execute, you must execute the producer and in another terminal the consumer
+
+* Execute producer
+```sh
+$ make proto-producer
+```
+
+* Execute consumer
+```sh
+$ make proto-consumer
 ```

@@ -6,6 +6,14 @@ package:
 assembly:
 	sbt assembly
 
+.PHONY: proto-producer
+proto-producer:
+	sbt "runMain com.exemples.producers.ProducerProtobufTopic"
+
+.PHONY: proto-consumer
+proto-consumer:
+	sbt "runMain com.exemples.consumers.ConsumerProtobufTopic"
+
 .PHONY: avro-producer
 avro-producer:
 	sbt "runMain com.exemples.producers.ProducerAvroTopic"

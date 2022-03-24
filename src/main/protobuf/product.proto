@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package com.examples.protos;
+
+message Product {
+  string id = 1;
+  string name = 2;
+  float price = 3;
+}
