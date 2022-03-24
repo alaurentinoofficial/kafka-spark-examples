@@ -20,7 +20,7 @@ $ docker-compose -f docker/docker-compose-kafka.dev.yml up
 
 <br/>
 
-## Executing examples
+## Executing different encoding formats
 
 ### String
 
