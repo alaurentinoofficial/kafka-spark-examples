@@ -1,16 +1,20 @@
 name := "kafka-spark-usages"
-
 version := "0.0.1"
+scalaVersion := "2.12.15"
 
-scalaVersion := "2.12.13"
+lazy val sparkVersion = "3.2.0"
 
 libraryDependencies ++= Seq(
-    "org.apache.spark" %% "spark-sql" % "3.2.0" % "provided",
-    "org.scalatest" %% "scalatest" % "3.0.1" % "test",
+  "org.scala-lang" % "scala-reflect" % "2.10.15",
+
+  "org.apache.spark" %% "spark-sql" % sparkVersion,
+  "org.apache.spark" %% "spark-core" % sparkVersion,
+  "org.apache.spark" %% "spark-streaming" % sparkVersion,
+  "org.apache.spark" %% "spark-sql-kafka-0-10" % sparkVersion,
+  "org.apache.spark" %% "spark-streaming-kafka-0-10" % sparkVersion,
+  "org.apache.spark" %% "spark-avro" % sparkVersion,
 )
 
-mainClass in (Compile, run) := Some("com.domain.Main")
-
-javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:MaxPermSize=2048M", "-XX:+CMSClassUnloadingEnabled")
-
-//assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false)
+artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
+  artifact.name + "_" + sv.binary + "-" + sparkVersion + "_" + module.revision + "." + artifact.extension
+}
