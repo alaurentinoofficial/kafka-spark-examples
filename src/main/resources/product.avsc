@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "Person",
+  "namespace": "com.exemples",
+  "fields": [
+    {"name": "id","type": ["string", "null"]},
+    {"name": "name","type": ["string", "null"]},
+    {"name": "price","type": ["double", "null"]}
+  ]
+}
