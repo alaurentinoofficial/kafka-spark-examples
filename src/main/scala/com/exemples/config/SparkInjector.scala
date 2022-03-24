@@ -1,4 +1,4 @@
-package com.exemples.configs
+package com.examples.configs
 
 import org.apache.spark.sql.SparkSession
 

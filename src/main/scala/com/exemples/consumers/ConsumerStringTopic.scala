@@ -1,9 +1,9 @@
-package com.exemples.consumers
+package com.examples.consumers
 
 import org.apache.spark.sql.streaming.OutputMode
 import org.apache.spark.sql.functions.col
 import org.apache.spark.sql.types.StringType
-import com.exemples.configs._
+import com.examples.configs._
 
 object ConsumerStringTopic extends App with SparkInjector {
   spark.sparkContext.setLogLevel("WARN")

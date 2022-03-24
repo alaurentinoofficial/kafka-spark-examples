@@ -8,32 +8,32 @@ assembly:
 
 .PHONY: proto-producer
 proto-producer:
-	sbt "runMain com.exemples.producers.ProducerProtobufTopic"
+	sbt "runMain com.examples.producers.ProducerProtobufTopic"
 
 .PHONY: proto-consumer
 proto-consumer:
-	sbt "runMain com.exemples.consumers.ConsumerProtobufTopic"
+	sbt "runMain com.examples.consumers.ConsumerProtobufTopic"
 
 .PHONY: avro-producer
 avro-producer:
-	sbt "runMain com.exemples.producers.ProducerAvroTopic"
+	sbt "runMain com.examples.producers.ProducerAvroTopic"
 
 .PHONY: avro-consumer
 avro-consumer:
-	sbt "runMain com.exemples.consumers.ConsumerAvroTopic"
+	sbt "runMain com.examples.consumers.ConsumerAvroTopic"
 
 .PHONY: json-producer
 json-producer:
-	sbt "runMain com.exemples.producers.ProducerJsonStringTopic"
+	sbt "runMain com.examples.producers.ProducerJsonStringTopic"
 
 .PHONY: json-consumer
 json-consumer:
-	sbt "runMain com.exemples.consumers.ConsumerJsonStringTopic"
+	sbt "runMain com.examples.consumers.ConsumerJsonStringTopic"
 
 .PHONY: string-producer
 string-producer:
-	sbt "runMain com.exemples.producers.ProducerStringTopic"
+	sbt "runMain com.examples.producers.ProducerStringTopic"
 
 .PHONY: string-consumer
 string-consumer:
-	sbt "runMain com.exemples.consumers.ConsumerStringTopic"
+	sbt "runMain com.examples.consumers.ConsumerStringTopic"

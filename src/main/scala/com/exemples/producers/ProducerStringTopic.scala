@@ -1,6 +1,6 @@
-package com.exemples.producers
+package com.examples.producers
 
-import com.exemples.configs._
+import com.examples.configs._
 
 object ProducerStringTopic extends App with SparkInjector {
   import spark.implicits._

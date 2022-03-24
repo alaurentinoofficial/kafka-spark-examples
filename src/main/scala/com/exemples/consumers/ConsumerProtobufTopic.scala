@@ -1,8 +1,8 @@
-package com.exemples.consumers
+package com.examples.consumers
 
 import org.apache.spark.sql.streaming.OutputMode
 import scala.io.Source
-import com.exemples.configs._
+import com.examples.configs._
 
 import com.examples.protos.product.Product
 import scalapb.spark.ProtoSQL

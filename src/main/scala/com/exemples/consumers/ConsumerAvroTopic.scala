@@ -1,11 +1,11 @@
-package com.exemples.consumers
+package com.examples.consumers
 
 import org.apache.spark.sql.streaming.OutputMode
 import org.apache.spark.sql.functions.{col, explode}
 import org.apache.spark.sql.avro.{from_avro}
 import org.apache.spark.sql.types.{ArrayType,StringType,DoubleType,StructType,StructField}
 import scala.io.Source
-import com.exemples.configs._
+import com.examples.configs._
 
 object ConsumerAvroTopic extends App with SparkInjector {
   spark.sparkContext.setLogLevel("WARN")

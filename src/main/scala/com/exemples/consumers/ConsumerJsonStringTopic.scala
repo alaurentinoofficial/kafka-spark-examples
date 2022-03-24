@@ -1,10 +1,10 @@
-package com.exemples.consumers
+package com.examples.consumers
 
 import org.apache.spark.sql.streaming.OutputMode
 import org.apache.spark.sql.functions.{col, from_json, explode}
 import org.apache.spark.sql.types.{ArrayType,StringType,DoubleType,StructType,StructField}
-import com.exemples.configs._
-import com.exemples.configs.Schemas
+import com.examples.configs._
+import com.examples.configs.Schemas
 
 object ConsumerJsonStringTopic extends App with SparkInjector {
   spark.sparkContext.setLogLevel("WARN")

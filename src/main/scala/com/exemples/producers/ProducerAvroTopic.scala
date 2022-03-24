@@ -1,4 +1,4 @@
-package com.exemples.producers
+package com.examples.producers
 
 import org.apache.spark.sql.streaming.OutputMode
 import org.apache.spark.sql.functions.{col, struct, explode}
@@ -6,8 +6,8 @@ import org.apache.spark.sql.avro.{to_avro}
 import org.apache.spark.sql.types.{ArrayType,StringType,DoubleType,StructType,StructField}
 import scala.io.Source
 import org.apache.spark.sql.Row
-import com.exemples.configs._
-import com.exemples.configs.Schemas
+import com.examples.configs._
+import com.examples.configs.Schemas
 
 object ProducerAvroTopic extends App with SparkInjector {
   spark.sparkContext.setLogLevel("WARN")

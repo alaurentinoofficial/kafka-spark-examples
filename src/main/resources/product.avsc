@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "Person",
-  "namespace": "com.exemples",
+  "namespace": "com.examples",
   "fields": [
     {"name": "id","type": ["string", "null"]},
     {"name": "name","type": ["string", "null"]},
