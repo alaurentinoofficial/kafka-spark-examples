@@ -1,6 +1,6 @@
 # Kafka + Spark examples
 
-This repository has 3 examples of how to produce and consume data from Kafka topics based on `string`, `json` and `avro`.
+This repository has 3 examples of how to produce and consume data from Kafka topics based on `string`, `json`, `avro` and `protobuf`.
 
 <br/>
 
@@ -13,7 +13,12 @@ This repository has 3 examples of how to produce and consume data from Kafka top
 
 ## Prerequisites
 
-You must have the kafka service running locally in backgroud, for that you can use docker compose to upload:
+1. Compile Protobuff entities
+```sh
+$ sbt compile
+```
+
+2. Run Kafka locally
 ```s
 $ docker-compose -f docker/docker-compose-kafka.dev.yml up
 ```
@@ -22,7 +27,7 @@ $ docker-compose -f docker/docker-compose-kafka.dev.yml up
 
 ## Executing different encoding formats
 
-### String
+### 1. String
 
 This example consists of simulating that the content encoded in the topic is a simple text and that, as a result, it will be shown on the consumer's screen.
 
@@ -38,7 +43,7 @@ $ make string-producer
 $ make string-consumer
 ```
 
-### Json
+### 2. Json
 
 This example consists of simulating that the content encoded in the topic is a json, the consumer must serialize the data as a dataframe in Spark.
 
@@ -59,7 +64,7 @@ $ make json-producer
 $ make json-consumer
 ```
 
-### Avro
+### 3. Avro
 
 This example consists of simulating that the content encoded in the topic is a avro, the consumer must serialize the data as a dataframe in Spark.
 
@@ -82,9 +87,9 @@ $ make avro-producer
 $ make avro-consumer
 ```
 
-### Protobuf
+### 4. Protobuf
 
-This example consists of simulating that the content encoded in the topic is a protobuf, the consumer must serialize the data as a dataframe in Spark. To accomplish that was used the [scalaPB](https://scalapb.github.io/) library for gRPC, for more information look the [documentation for SparkSQL](https://scalapb.github.io/docs/sparksql/)
+This example consists of simulating that the content encoded in the topic is a protobuf, the consumer must serialize the data as a dataframe in Spark. To accomplish that was used the [scalaPB](https://scalapb.github.io/) library for gRPC, for more insights checkout [documentation for SparkSQL](https://scalapb.github.io/docs/sparksql/)
 
 The schema used represents an Ecommerce product, follows the schema:
 * `id`: string
